@@ -113,3 +113,57 @@ nav > a.active{
 }
 
 .banner > ul > li > img { position: absolute; left: -30%; height: 100%; }
+
+
+.main{
+	position: relative;
+	width:1200px;
+	height: 473px;
+	margin:34px auto 0;
+}
+
+.main > aside{
+
+	float: left;
+	width: 450px;
+}
+
+.main > aside > dl{
+	position: relative;
+	display: block;
+	height: 74px;
+	margin-bottom: 17px;
+}
+.main h1 { font-size: 30px; font-weight: lighter; margin-bottom: 23px; }
+.main h1 > samp { font-size: 30px; color: #7c7c7c; }
+.main > aside > dl > dt { position: absolute; 
+	top: -1px; left: 92px; font-size: 16px; 
+	font-weight: bold;
+	line-height:16px;
+	text-decoration: underline;
+	height: 17px; }
+.main > aside > dl > dd:first-of-type { position: absolute; left: 0; }
+.main > aside > dl > dd:last-of-type { position: absolute; top: 20px; left: 90px; }
+
+.main > article{
+	float: right;
+	width: 720px;
+	overflow: hidden;
+}
+.main > article > p,
+.main > article > img { margin-bottom: 20px; }
+
+footer{
+
+	position: relative; background: #000;
+
+}
+
+.container{
+	width: 1200px; height: 64px; margin: 0 auto;
+}
+
+footer > .container > p { line-height: 64px; float: left; color: #fff; }
+footer > .container > span { float: right; margin: 14px 40px; }
+footer > .container > span > img { margin-left: 4px; opacity: .7; }
+footer > .container > span > img:hover { opacity: 1; cursor: pointer; }
