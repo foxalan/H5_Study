@@ -55,3 +55,61 @@ nav > a:hover,
 nav > a.active{
 	padding-bottom: 7px;
 }
+
+.banner{
+	background: #eaeaea;
+}
+
+.banner >ul{
+	position: relative;
+	width: 1490px;
+	height: 538px;
+	margin: 0 auto;
+	padding-top: 10px;
+}
+
+.banner >ul >li {
+	position: absolute;
+	width: 610px;
+	height: 300px; 
+	overflow: hidden;
+}
+
+.banner >ul >li.active{
+	z-index:2;
+	top: 0;
+	right:0;
+	left: 0;
+	bottom: 0;
+	width: 960px;
+	height: 460px;
+	border: 1px solid #fff;
+	margin: auto;
+}
+/*.banner > ul > li.active { 
+	z-index: 2; 
+	top: 37px;
+	right: 0;
+	left: 0;
+	width: 960px;
+	 height: 460px;
+	  margin: auto; border: 1px solid #fff; box-shadow: 0 30px 140px 22px rgba(0, 0, 0, .35); }*/
+
+
+.banner >ul >li.left{
+	z-index: 1;
+	top: 0;
+    bottom: 0; 
+	left: 0;
+    margin: auto;
+}
+
+.banner >ul >li.right{
+	z-index: 1;
+	top: 0; 
+	right: 0;
+	bottom: 0;
+    margin: auto;
+}
+
+.banner > ul > li > img { position: absolute; left: -30%; height: 100%; }
