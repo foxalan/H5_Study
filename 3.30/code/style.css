@@ -31,34 +31,34 @@ header > .container > nav > a:hover{background: #FF0000;}
 	height: 720px;
 	top: 0;
 	right: 0;
-	left: 0;
-	bottom: 0
 }
 
 .banner > div > hgroup {
 	
 	position: absolute;
 	width: 1080px;
-	height: 240px;
+	height: 200px;
 	z-index: 2;
-	top: 180px;
+	top: 240px;
 	left: 420px;
 	margin: auto;
 }
 
 .banner > div > hgroup > h1 {
+
 	line-height: 90px;
 	text-align: center;
 	font-size: 60px;
-	height: 180px;
+	height: 90px;
 	margin-bottom: 10px;
 	color:#fff;
 	font-weight: bold;
 }
 
 .banner > div > hgroup > h2 {
+
 	line-height: 90px;
-	height: 180px;
+	height: 90px;
 	font-size: 30px;
 	text-align: center;
 	color: #fff;
@@ -79,8 +79,8 @@ header > .container > nav > a:hover{background: #FF0000;}
 	text-align: center;
 	color: #f46208;
 	font-size: 40px;
-	margin-bottom: 40px;
-	margin-top: 80px;
+	padding-top: 40px;
+	padding-bottom: 40px;
 }
 
 .protfolio > p{
@@ -90,16 +90,18 @@ header > .container > nav > a:hover{background: #FF0000;}
 	color: #000;
 	font-weight: bold;
 	font-size: 24px;
+	
 }
 
 .protfolio > nav{
-	
+	padding-top: 40px;
 	margin-top: 60px;
 	margin-bottom: 40px;
 	width: 590px;
 	height: 80px;
 	position: relative;
 	margin: 0 auto;
+	padding-bottom: 40px;
 }
 
 .protfolio > nav > a {
@@ -128,6 +130,7 @@ header > .container > nav > a:hover{background: #FF0000;}
 /*state*/
 
 .stats {
+	
 	position: relative;
 	height: 500px;
 
@@ -140,8 +143,8 @@ header > .container > nav > a:hover{background: #FF0000;}
 	text-align: center;
 	color: #f46208;
 	font-size: 40px;
-	margin-bottom: 40px;
-	margin-top: 80px;
+	padding-bottom: 40px;
+	padding-top: 40px;
 }
 
 .stats > p{
@@ -151,12 +154,12 @@ header > .container > nav > a:hover{background: #FF0000;}
 	color: #000;
 	font-weight: bold;
 	font-size: 24px;
-	margin-bottom: 40px;
+	
 }
 
 .stats > div {
-	margin-top: 80px;
-	margin-bottom: 40px;
+	padding-top: 40px;
+	padding-bottom: 40px;
 	width: 1000px;
 	height: 120px;
 	position: relative;
@@ -165,8 +168,7 @@ header > .container > nav > a:hover{background: #FF0000;}
 
 .stats > div > dl{
 	
-	margin-top: 60px;
-	margin-bottom: 40px;
+	
 	width: 250px;
 	height: 160px;
 	position: relative;
@@ -223,8 +225,8 @@ header > .container > nav > a:hover{background: #FF0000;}
 	text-align: center;
 	color: #f46208;
 	font-size: 40px;
-	margin-bottom: 40px;
-	margin-top: 80px;
+	padding-bottom: 40px;
+	padding-top: 40px;
 }
 
 .team > p{
@@ -234,17 +236,17 @@ header > .container > nav > a:hover{background: #FF0000;}
 	color: #fff;
 	font-weight: bold;
 	font-size: 24px;
-	margin-top: 40px;
-	margin-bottom: 40px;
+	
 }
 
 .team > div {
+
 	width: 900px;
 	height: 320px;
 	position: relative;
 	margin:0 auto;
-	margin-top: 40px;
-	margin-bottom: 40px;
+	padding-top: 40px;
+	padding-bottom: 40px;
 }
 
 .team > div > dl{
@@ -354,17 +356,19 @@ header > .container > nav > a:hover{background: #FF0000;}
 	left: 20px;
 	top: 20px;
 	color: #000;
-	background: #abcdef;
+	border: 2px solid #000;
 }
 
 .inputemail{
-	background: #abcdef;
+	
 	position: absolute;
 	width: 440px;
 	height: 60px;
 	left: 480px;
 	top: 20px;
 	color: #000;
+	border: 2px solid #000;
+
 }
 
 .inputmessage{
@@ -373,7 +377,8 @@ header > .container > nav > a:hover{background: #FF0000;}
 	height: 400px;
 	left: 20px;
 	top: 100px;
-	background: #abcdef;
+	border: 2px solid #000;
+
 }
 
 
