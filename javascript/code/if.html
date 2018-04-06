@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>	IF</title>
+
+	
+</head>
+<body>
+
+	<script type="text/javascript">
+	//	var age = 15 ;
+		var age = prompt();
+		if(age<18){
+			alert("your age is too young");
+		}
+
+		var day = new Date().getDay();
+		document.write("today is "+day);
+		switch(day){
+			case 0:
+			document.write("today is Monday");
+			break;
+			default:
+			document.write("today is Sunday");
+			break;
+		}
+
+		for(var i = 1; i<=3;i++){
+			document.write(i+'<br/>');
+			document.write('<hr>');
+			for(var j = 1;j<=5;j++){
+				document.write(j+'<br/>');
+			}
+
+		}
+	</script>
+	
+</body>
+</html>
