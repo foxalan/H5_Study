@@ -26,6 +26,53 @@
 	console.log(first+"==============="+arry);
 
 	
+	console.log("========================================================================================");
+	//数组方法
+	var num = [12,35,22,33,44,5,88,99];
+	var num2 = [12,55,25,33];
+	//join将数组转化为字符串
+	console.log("join:"+num.join("间隔符，默认为逗号"));
+	console.log("sort:"+num.sort());
+	//reverse 反转操作
+	console.log("reverse"+num2.reverse());
+	var numArr = num.sort(function(a,b){
+		return a-b;
+	}).join("-");
+	console.log(numArr);
+
+	console.log("========================================================================================");
+	//数组的拆分和重组
+	var contact1 = [12,0,45];
+	var contact2 = ["contact","tact","arry"];
+	var contact3;
+	contact3 = contact1.concat(contact2,[12,15,456]);
+	console.log(contact3);
+	//Slice
+	var slice1 = contact2.slice(0,1);
+	console.log(slice1);
+
+	console.log("=========================================================================================");
+	//数组的删除和添加
+	//Splice能改变原来的数组
+	var splice1 =[12,33,56,78,58];
+	var splice2 = splice1.splice(2,2);
+	//插入时返回空
+	var splice3 = splice1.splice(2,0,"12",2,"15");
+	var splice4 = splice1.splice(2,1,"5555555555555555555555555555");
+	console.log(splice1+"==="+splice2+"==="+splice3);
+
+
+	console.log("=========================================================================================");
+	//数据的索引
+	var index1 = [12,7,88,7,99,7,88,89];
+	var pos = index1.indexOf(7);
+	var posLast = index1.lastIndexOf(7);
+	console.log(pos+"==="+postLast);
+	pos = index1.indexOf(7,3);
+	console.log(pos);
+
+
+
 </script>
 
 
