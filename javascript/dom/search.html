@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+
+	<style type="text/css">
+		
+		.current{
+			background: red;
+		}
+	</style>
+</head>
+<body>
+
+	<header id="header">
+		<h1 id="title">header</h1>
+		<ul id="ul">
+			<li id="one">one</li>
+			<li>two</li>
+			<li>three</li>
+		</ul>
+	</header>
+
+	<section>
+		<p id="text">我是需求量的人人众</p>
+	</section>
+
+
+
+<script type="text/javascript">
+	//查找元素和元素集
+	var header = document.getElementById("header");
+	console.log(header);
+	var list = document.getElementsByTagName("li");
+	console.log("================================================================");
+
+	//设置元素的样式
+	header.style.color = '#f00';
+	var title = document.getElementById("title");
+	title.style.backgroundColor = '#000';
+	console.log("================================================================");
+
+	//innerHTML和className
+	for(var i = 0;i<list.length;i++){
+		list[i].innerHTML+="let us go";
+	}
+	var one = document.getElementById("one");
+	one.className = "current";
+	console.log("================================================================");
+
+	//属性设置与获取
+	var text = document.getElementById("text");
+	text.setAttribute("align","center");
+	text.setAttribute("isread","false");
+	//删除
+	text.removeAttribute("align");
+
+
+</script>
+
+	
+</body>
+</html>

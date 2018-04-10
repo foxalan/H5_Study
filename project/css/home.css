@@ -1,0 +1,67 @@
+
+
+*{font-family: Microsoft YaHei UI;margin: 0;padding: 0;border: none;}
+a { text-decoration: none;}
+ul{ list-style: none;}
+
+header {position: relative;height: 120px;}
+header > .container{
+	position: relative;
+	
+	width: 1000px;
+	height: 120px;
+	top: 10px;
+	left:350px;
+
+}
+
+header > .container > img{
+	position: relative;
+	float: left;
+
+}
+
+header > .container > h1{
+	position: relative;
+	float: left;
+	position: relative;
+	height: 120px;
+	font-size: 46px;
+	line-height: 120px;
+	color:#85b359;
+	text-align: center;
+	top: 0px;
+	left: 20px;
+	margin-top: 0px;
+}
+
+.index {
+	position: relative;
+	background-color: rgba(66,165,246,0.81494140625);
+	height: 60px;
+
+}
+
+.index > div {
+	/*background: #abcdef;*/
+	position:relative;
+	height: 60px;
+	margin-top: 10px;
+	padding-left: 350px;
+}
+
+.index > div > a{
+	position: relative;
+	float: left;
+	line-height: 60px;
+	text-align: center;
+	color: #fff;
+	font-size: 20px;
+	text-decoration: none;
+	width: 145px;
+}
+
+.index > div > a:hover{
+	color: rgba(66,165,246,0.81494140625);
+	background-color: #FFF;
+}
