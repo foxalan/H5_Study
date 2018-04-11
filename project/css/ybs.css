@@ -1,0 +1,166 @@
+
+
+*{font-family:微软雅黑;margin: 0;padding: 0;border: none;}
+a { text-decoration: none;}
+ul{ list-style: none;}
+
+header {position: relative;height: 120px;}
+header > .container{
+	position: relative;
+	
+	width: 1000px;
+	height: 120px;
+	top: 10px;
+	left:350px;
+
+}
+
+header > .container > img{
+	position: relative;
+	float: left;
+
+}
+
+header > .container > h1{
+	position: relative;
+	float: left;
+	position: relative;
+	height: 120px;
+	font-size: 46px;
+	line-height: 120px;
+	color:#85b359;
+	text-align: center;
+	top: 0px;
+	left: 20px;
+	margin-top: 0px;
+}
+
+.index {
+	position: relative;
+	background-color: rgba(66,165,246,0.81494140625);
+	height: 60px;
+
+}
+
+.index > div {
+	/*background: #abcdef;*/
+	position:relative;
+	height: 60px;
+	margin-top: 10px;
+	padding-left: 350px;
+}
+
+.index > div > a{
+	position: relative;
+	float: left;
+	line-height: 60px;
+	text-align: center;
+	color: #fff;
+	font-size: 20px;
+	text-decoration: none;
+	width: 145px;
+}
+
+.index > div > a:link{
+	color: rgba(66,165,246,0.81494140625);
+	background-color: #FFF;
+}
+
+.index > div > a:visited{
+	color: rgba(66,165,246,0.81494140625);
+	background-color: #FFF;
+}
+
+.index > div > a:hover{
+	color: rgba(66,165,246,0.81494140625);
+	background-color: #FFF;
+}
+
+.index > div > a:active{
+	color: rgba(66,165,246,0.81494140625);
+	background-color: #FFF;
+
+}
+
+
+.body{
+	position: relative;
+	height: auto !important;
+	min-height: 860px;
+}
+
+.body > iframe {
+	position: relative;
+	width: 100%;
+	height: auto !important;
+	min-height: 860px;
+
+}
+
+.footer {
+	position: relative;
+	width: 100%;
+	height: 165px;
+	background: grey;
+}
+
+footer > .container {
+
+	position: relative;
+	width: 1200px;
+	height: 145px;
+	margin: 10px auto;
+	top: 10px;
+}
+/*
+<p data-bind="foreach:RequestListAll">
+  <a class="PositionName" style="display: block;color:gray; float: left; font-family: 微软雅黑; font-size: 14px;border-right:1px solid gray;padding-right:10px;padding-left:10px;" data-bind="text:PositionName,click: $root.ViewDetail"></a>                            
+</p>*/
+
+footer > .container > div{
+	position: relative;
+	float: left;
+}
+
+.left {
+	position: relative;
+	width: 350px;
+	height: 145px;
+}
+
+.left > h2{
+	color: #abcdef;
+	width: 400px;
+	text-align: center;
+	padding-right: 20px;
+	border-right:2px solid #f00;
+	line-height: 145px;
+}
+
+
+.center{
+	position: relative;
+	width: 300px;
+	height: 100px;
+	margin-top: 20px;
+	margin-left: 20px;
+	left: 100px;
+}
+
+.right{
+	position: relative;
+	width: 500px;
+	height: 45px;
+	margin-top: 50px;
+
+}
+
+.right > p {
+	font-size: 14px;
+	position: relative;
+	line-height: 30px;
+	height: 30px;
+	color: #000;
+	text-align: right;
+
+}

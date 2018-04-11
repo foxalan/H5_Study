@@ -1,67 +1,72 @@
-
-
-*{font-family: Microsoft YaHei UI;margin: 0;padding: 0;border: none;}
-a { text-decoration: none;}
-ul{ list-style: none;}
-
-header {position: relative;height: 120px;}
-header > .container{
+.banner{
 	position: relative;
-	
-	width: 1000px;
-	height: 120px;
-	top: 10px;
-	left:350px;
-
+	width: 1400px;
+	height: 650px;
+	margin: 0 auto;
 }
 
-header > .container > img{
+.banner > img {
 	position: relative;
-	float: left;
-
+	width: 1400px;
+	height: 650px;
 }
 
-header > .container > h1{
+.state {
 	position: relative;
-	float: left;
-	position: relative;
-	height: 120px;
-	font-size: 46px;
-	line-height: 120px;
-	color:#85b359;
-	text-align: center;
-	top: 0px;
-	left: 20px;
-	margin-top: 0px;
-}
-
-.index {
-	position: relative;
-	background-color: rgba(66,165,246,0.81494140625);
-	height: 60px;
-
-}
-
-.index > div {
-	/*background: #abcdef;*/
-	position:relative;
-	height: 60px;
+	width: 1400px;
+	height: 200px;
 	margin-top: 10px;
-	padding-left: 350px;
+	margin-bottom: 10px;
+	margin-left: auto;
+	margin-right: auto;;
 }
 
-.index > div > a{
+.state > dl{
+	position: relative;
+	width: 1400px;
+	height: 200px;
+}
+
+.state > dl >dt {
 	position: relative;
 	float: left;
-	line-height: 60px;
-	text-align: center;
-	color: #fff;
-	font-size: 20px;
-	text-decoration: none;
-	width: 145px;
+	width: 280px;
+	height: 200px;
 }
 
-.index > div > a:hover{
-	color: rgba(66,165,246,0.81494140625);
-	background-color: #FFF;
+.state > dl > dt >img{
+	width: 260px;
+	height: 200px;
+	margin-left: 10px;
 }
+
+.contact > dl {
+	position: relative;
+	height: 48px;
+	width: 335px;
+	margin-left: 10px;
+}
+
+.contact > dl > dt {
+	position: absolute;
+	width: 40px;
+	height: 18px;
+	left: 20px;
+	top: 0px;
+}
+
+.contact > dl > dd{
+	position: absolute;
+	width: 200px;
+	height: 18px;
+	font-size: 24px;
+	color: #666666;
+	font-weight: bold;
+	line-height: 20px;
+	text-align: center;
+	left: 20px;
+	letter-spacing: 5px;
+	top: 10px;
+
+}
+

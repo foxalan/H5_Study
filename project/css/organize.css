@@ -1,0 +1,45 @@
+.title{
+	color: #F00;
+	font-weight: bolder;
+	letter-spacing: 8px;
+	font-size: 30px;
+}
+
+.content{
+	color:gray;
+	line-height: 32px;
+	font-weight: bolder;
+	font-size: 24px;
+	letter-spacing: 3px;
+
+}
+
+.content1 {
+	position: relative;
+	width: 1000px;
+	height: 150px;
+}
+
+.content1 > img{
+	position: relative;
+	width: 150px;
+	height: 150px;
+	margin:0 auto;
+	left: 425px;
+
+}
+
+.content2 {
+	position: relative;
+	width: 1000px;
+	height: 550px;
+}
+
+.content2 > img{
+	position: relative;
+	width: 750px;
+	height: 550px;
+	margin:0 auto;
+	left: 125px;
+}
+
