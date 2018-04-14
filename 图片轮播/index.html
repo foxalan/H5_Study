@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+<body>
+	<section class="main" id="main">
+
+		<div class="banner" id="banner">
+			<a href="#">
+				<div class="banner-slide slide1 slide-active"></div>
+			</a>
+			<a href="#">
+				<div class="banner-slide slide2"></div>
+			</a>
+			<a href="#">
+				<div class="banner-slide slide3"></div>
+			</a>
+		</div>
+
+		<a href="javascript:void(0)" class="button prev" id="prev"></a>
+		<a href="javascript:void(0)" class="button next" id="next"></a>
+
+		<div class="dots" id="dots">
+			<span class="active"></span>
+			<span></span>
+			<span></span>
+		</div>
+
+	</section>
+
+
+	<script type="text/javascript">
+		var banner = document.getElementById("banner");
+		var pics = banner.getElementsByTagName("div");
+
+		var dots = document.getElementById("dots").getElementsByTagName("span");
+		var timer = null;
+		var index = 0;
+		var size = 3;
+
+		// 图片自动轮播
+		startAutoPlay();
+		function startAutoPlay(){
+   				timer = setInterval(function(){
+       			index++;
+       			if(index >= size){
+          			index = 0;
+       			}
+       			changeImg();
+   		  	},3000)
+		}
+
+		function changeImg(){
+			
+			for(var i=0,len=dots.length;i<len;i++){
+     				dots[i].className = "";
+       				pics[i].style.display = "none";
+   			}	
+  		 	dots[index].className = "active";
+   			pics[index].style.display = "block";
+		}
+
+		function cancelAutoPlay(){
+			if(timer){
+       			clearInterval(timer);
+			}
+		}
+
+		//点击切换
+		var btnPrev = document.getElementById("prev");
+		var btnNext = document.getElementById("next");
+
+		btnPrev.onclick = function(){
+			cancelAutoPlay();
+			if(index == 0){
+				index = 2;
+			}else{
+				index--;
+			}
+			changeImg();
+		}
+
+		btnNext.onclick = function(){
+			cancelAutoPlay();
+			if(index == (size-1)){
+				index = 0;
+			}else{
+				index++;
+			}
+			changeImg();
+		}
+
+		//设置事件监听
+		var main = document.getElementById("main");
+		main.onmouseover = function(){
+    		cancelAutoPlay();
+    	}
+    	main.onmouseout = function(){
+    		startAutoPlay();
+    	}
+
+	</script>
+</body>
+</html>

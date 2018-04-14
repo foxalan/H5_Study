@@ -1,0 +1,122 @@
+*
+{
+    margin: 0;
+    padding: 0;
+}
+
+ul
+{
+    list-style: none;
+}
+
+body
+{
+    font-family: '微软雅黑';
+
+    color: #14191e;
+}
+
+.main
+{
+    position: relative;
+    width: 1200px;
+    height: 460px;
+    margin: 10px auto;
+
+    background: #abcdef;
+}
+
+
+.banner
+{
+    position: relative;
+   
+
+    overflow: hidden;
+
+    width: 1200px;
+
+    background: :460px;
+}
+
+.banner-slide
+{
+    display: none;
+    float: left;
+
+    width: 1200px;
+    height: 460px;
+
+    background-repeat: no-repeat;
+}
+
+.slide-active{
+	display:block;
+}
+
+
+.slide1{
+	background-image:url(../img/bg1.jpg);
+}
+
+.slide2{
+	background-image:url(../img/bg2.jpg);
+}
+
+.slide3{
+	background-image:url(../img/bg3.jpg);
+}
+
+.button{
+	position: absolute;
+	display: block;
+	height: 80px;
+    width: 40px;
+    top: 50%;
+    margin-top:-40px;
+    left: 244px;
+	background: url(../img/arrow.png) center center no-repeat;
+}
+
+.prev{
+    transform: rotate(180deg);
+}
+
+.next {
+   
+    left:auto;
+    right:0;
+}
+
+.button:hover{
+    background-color:#333;
+    opacity: 0.8;
+    filter:alpha(opacity=80);
+}
+
+.dots{
+    position: absolute;
+    bottom: 24px;
+    right: 0;
+    text-align: right;
+    padding-right: 24px;
+    line-height: 12px;
+}
+
+.dots span {
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    margin-left: 8px;
+    background-color: rgba(7, 17, 27, 0.4);
+    cursor: pointer;
+    box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.8) inset;
+}
+
+.dots span.active{
+    box-shadow: 0 0 0 2px rgba(7, 17, 27, 0.4) inset;
+    background-color: #ffffff;
+}
+
+
