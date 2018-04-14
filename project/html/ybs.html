@@ -47,7 +47,7 @@
 
 			<div class="right">
 				<p>©2018 武汉源本圣电子商务有限公司版权所有</p>
-				<p><a>手机版</a>|本站使用凡科建站搭建|管理登录|鄂ICP备17005828号</p>
+				<p>手机版|本站使用凡科建站搭建|管理登录|鄂ICP备17005828号</p>
 			</div>
 		</div>
 
@@ -72,15 +72,15 @@
 
 
 		console.log("about onclick before");
-		// home.addEventListener("click",function(){
-		// 	//让所有的标题的背景变为原来的背景再进行设置
-		// 	trunOff();
-		// 	home.style.color = "rgba(66,165,246,0.81494140625)";
-		// 	home.style.backgroundColor = "#FFF";
-		// 	body.style.minHeight = "840px";
-		// 	iframecontainer.style.minHeight = "840px";
-		// 	iframecontainer.src = "home.html";
-		// });
+		
+			//让所有的标题的背景变为原来的背景再进行设置
+			trunOff();
+			home.style.color = "rgba(66,165,246,0.81494140625)";
+			home.style.backgroundColor = "#FFF";
+			body.style.minHeight = "860px";
+			iframecontainer.style.minHeight = "860px";
+			iframecontainer.src = "home.html";
+		
 		home.addEventListener("click",function(){
 			//让所有的标题的背景变为原来的背景再进行设置
 			trunOff();
@@ -107,6 +107,8 @@
 			trunOff();
 			treads.style.color = "rgba(66,165,246,0.81494140625)";
 			treads.style.backgroundColor = "#FFF";
+			body.style.minHeight = "1620px";
+			iframecontainer.style.minHeight = "1620px";
 			iframecontainer.src = "trends.html";
 		});
 
@@ -115,6 +117,8 @@
 			trunOff();
 			app.style.color = "rgba(66,165,246,0.81494140625)";
 			app.style.backgroundColor = "#FFF";
+			body.style.minHeight = "1620px";
+			iframecontainer.style.minHeight = "1620px";
 			iframecontainer.src = "app.html";
 		});
 
@@ -150,19 +154,20 @@
 			iframecontainer.src = "contact.html";
 		});
 
-		for(var i =0;i<list.length;i++){
+		// for(var i =0;i<list.length;i++){
 			
-			list[i].onmouseover = function(){
-			list[i].style.color = "rgba(66,165,246,0.81494140625)";
-			list[i].style.backgroundColor = "#FFF";
-			}
+		// 	list[i].onmouseover = function(){
+		// 	list[i].style.color = "rgba(66,165,246,0.81494140625)";
+		// 	list[i].style.backgroundColor = "#FFF";
+		// 	console.log("onmouseover");
+		// 	}
 				
-		}
+		// }
 
         function trunOff(){
 			for(var i =0;i<list.length;i++){
 				list[i].style.color = "#fff";
-				list[i].style.backgroundColor= "rgba(66,165,246,0.81494140625)";
+				list[i].style.backgroundColor= "transparent";
 			}
 		}
 

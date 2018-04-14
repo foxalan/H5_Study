@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>	</title>
+
+	<style type="text/css">
+
+		*{font-family:微软雅黑;margin: 0;padding: 0;border: none;}
+
+		.title{
+			color: #F00;
+			font-weight: bolder;
+			letter-spacing: 8px;
+			font-size: 30px;
+		}
+
+		table {
+			position: relative;
+			width: 860px;
+			margin-top: 20px;
+		}
+
+		table > tbody {
+			position: relative;
+			width: 860px;
+			height: 600px;
+		
+		}
+
+		table > tbody > tr{
+			display: table;
+			position: relative;
+			margin-top: 10px;
+			width: 800px;
+			height: 120px;
+		}
+		
+	</style>
+</head>
+<body>
+
+	<input id="btnAdd" type="button" name="添加数据" value="添加一行数据">
+
+	<table>
+		<caption>title</caption>
+		
+		<tr>
+			<th>总优惠金额</th>
+			<th>应收配送费</th>
+			<th>实收配送费</th>
+			<th>总订单</th>
+			<th>总配送单数</th>
+			<th>免配送单数</th>
+			<th>收费配送单数</th>
+			<th>自提单费</th>
+		</tr>
+
+		
+		<tbody id="tbMain">
+			
+		</tbody>
+	</table>
+	
+</body>
+	
+	<script type="text/javascript">
+		var btnAdd = document.getElementById("btnAdd");
+		var mainBody = document.getElementById("tbMain");
+		addValue();
+		btnAdd.onClick = function(){
+
+		}
+
+		function addValue(){
+			var inputTotal = document.createElement('input');
+			var row = document.createElement('tr'); //创建行  
+     			
+     		row.style.display = "table";
+			row.style.position =  "relative";
+			row.style.marginTop = "10px";
+			row.style.width = "800px";
+			row.style.height = "120px";
+
+			//创建第一列id 加入图片 
+     		var totalMoney = document.createElement('td');
+     		
+			inputTotal.innnerHtml = "152.25";
+			
+			totalMoney.appendChild(inputTotal);
+     		row.appendChild(totalMoney); 
+			mainBody.appendChild(row);    
+  		}
+	</script>
+
+
+
+</html>

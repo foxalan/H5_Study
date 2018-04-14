@@ -3,8 +3,172 @@
 <head>
 	<meta charset="UTF-8">
 	<title>动态</title>
+	<link rel="stylesheet" type="text/css" href="../css/trends.css">
 </head>
 <body>
-	<h1>动态</h1>
+
+	<section class="banner-wrapper">
+		
+		<ul class="banners-container clear-float" style="left:-1400px;">
+			<li><a href="#"><img src="../img/trends/6.jpg"></a></li>
+			<li><a href="#"><img src="../img/trends/4.jpg"></a></li>
+			<li><a href="#"><img src="../img/trends/5.jpg"></a></li>
+			<li><a href="#"><img src="../img/trends/6.jpg"></a></li>
+			<li><a href="#"><img src="../img/trends/4.jpg"></a></li>
+		</ul>
+		
+	</section>
+
+	<section class="container">
+		<aside>
+			<h2 id="introduce">企业文化</h2>
+			<h2 id="ceo">精彩视频</h2>
+			<h2 id= "organize">员工风采</h2>
+			<h2 id= "message">行内资讯</h2>
+		</aside>
+
+		<article>
+
+			<iframe  id="iframecontainer" align="center" width="100%" height="100%" src="introduce.html"  frameborder="no" border="0" marginwidth="0" marginheight="0" scrolling="no"></iframe>
+		</article>
+	</section>
+
+	<script type="text/javascript">
+
+		var container = document.getElementsByClassName('banners-container')[0];
+		var timer = null;
+		var img_width = -parseInt(container.style.left);
+		var moving = false;
+			
+		console.log(img_width+"================="+container);
+		
+
+	    //模拟左右点击动作
+    	function rightClick() {
+        	if (!moving) {
+            	if (container.offsetLeft <= -4200)  //模拟无限滚动
+          		{
+                	container.style.left = 0 + "px";
+            	}
+            	startMove(container.offsetLeft - img_width);
+        	}
+    	}
+
+    	//移动到指定位置
+    	function startMove(target) {
+        var speed = 0;
+
+        	//	switchDot((target / -1180) - 1);        //  -1180 -2360 -3540
+
+        	clearInterval(timer); //解决重复点击的定时器叠加bug
+
+        	timer = setInterval(function () {
+            	speed = (target - container.offsetLeft) / 10; //速度
+
+            	speed = speed > 0 ? Math.ceil(speed) : Math.floor(speed);
+
+            	if (target == container.offsetLeft) {
+                	clearInterval(timer);
+                	moving = false;
+            	}
+            	else {
+                	container.style.left = container.offsetLeft + speed + "px";
+                	moving = true;
+            	}
+        	}, 30);
+    	}
+
+
+    	var clearAutoPlay = null;
+   			 //自动播放
+    	function autoPlay() {
+        	clearAutoPlay = setInterval(function () {
+            		rightClick();
+        	}, 1500);
+    	}
+
+    	autoPlay();
+
+
+		var introduce = document.getElementById("introduce");
+		var ceo = document.getElementById("ceo");
+		var organize = document.getElementById("organize");
+		var message = document.getElementById("message");
+
+		var list = document.getElementsByTagName("h2");
+		var iframecontainer = document.getElementById("iframecontainer");
+		introduce.click;
+
+		trunOff();
+		introduce.style.color = "#fff";
+		introduce.style.paddingTop = "15px";
+		introduce.style.paddingBottom = "15px";
+		introduce.style.marginTop="-10px";
+		introduce.style.marginBottom = "-10px";
+		introduce.style.backgroundColor = "#abceef";
+		iframecontainer.src="treads/culture.html";
+
+		introduce.addEventListener("click",function(){
+			
+			trunOff();
+			introduce.style.color = "#fff";
+			introduce.style.paddingTop = "15px";
+			introduce.style.paddingBottom = "15px";
+			introduce.style.marginTop="-10px";
+			introduce.style.marginBottom = "-10px";
+			introduce.style.backgroundColor = "#abceef";
+			iframecontainer.src="treads/culture.html";
+		});
+
+		ceo.addEventListener("click",function(){
+			console.log("i have been click");
+			trunOff();
+			ceo.style.marginTop="-10px";
+			ceo.style.marginBottom = "-10px";
+			ceo.style.color = "#fff";
+			ceo.style.paddingTop = "15px";
+			ceo.style.paddingBottom = "15px";
+			ceo.style.backgroundColor = "#abceef";
+			iframecontainer.src="treads/video.html"
+		});
+
+		organize.addEventListener("click",function(){
+			console.log("i have been click");
+			trunOff();
+			organize.style.marginTop="-10px";
+			organize.style.marginBottom ="-10px";
+			organize.style.color = "#fff";
+			organize.style.paddingTop = "15px";
+			organize.style.paddingBottom = "15px";
+			organize.style.backgroundColor = "#abceef";
+			iframecontainer.src = "treads/video.html";
+		});
+
+		message.addEventListener("click",function(){
+			console.log("i have been click");
+			trunOff();
+			message.style.marginTop="-10px";
+			message.style.marginBottom ="-10px";
+			message.style.color = "#fff";
+			message.style.paddingTop = "15px";
+			message.style.paddingBottom = "15px";
+			message.style.backgroundColor = "#abceef";
+			iframecontainer.src = "treads/video.html";
+		});
+
+		 function trunOff(){
+			for(var i =0;i<list.length;i++){
+				list[i].style.color = "#f00";
+				list[i].style.backgroundColor= "#fff";
+				list[i].style.paddingTop = "0px";
+				list[i].style.paddingBottom = "0px";
+				list[i].style.marginTop="10px";
+				list[i].style.marginBottom = "10px";
+			}
+		}
+
+
+	</script>
+	
 </body>
 </html>

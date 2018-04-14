@@ -3,8 +3,237 @@
 <head>
 	<meta charset="UTF-8">
 	<title>APP下载</title>
+
+	<style type="text/css">
+
+		*{
+			margin: 0px;
+			padding: 0px;
+		}
+		.banners-container
+		{
+   			position: absolute;
+    		z-index: 1;
+
+    		overflow: hidden;
+			margin-top: 5px;
+    		width: 7000px;
+    		height: 650px;
+		}
+		.banner-wrapper
+		{
+    		position: relative;
+    		z-index: 3;
+
+    		overflow: hidden;
+
+    		width: 1400px;
+    		height: 650px;
+    		margin: 0 auto;
+
+		}
+
+		.banner-wrapper img
+		{
+    		float: left;
+
+    		width: 1400px;
+    		height: 650px;
+		}
+		
+		.product {
+			position: relative;
+			width: 1200px;
+			height: 650px;
+			margin: 10px auto;
+		}
+		
+		.product > h1 {
+			color: #f00;
+			font-weight: bolder;
+			letter-spacing: 10px;
+		}
+
+		.productcontainer{
+			position: relative;
+		
+			width: 1000px;
+			margin: 0 auto;
+		}
+
+		.divline{
+			position: relative;
+			display: table-cell;
+			width: 1000px;
+			height: 325px;
+			display: table;
+			
+			margin-top: 10px;
+			margin-bottom: 10px;
+		}
+
+		.divitem {
+			position: relative;
+			display: table;
+			zoom: 1;
+			float: left;
+			width: 300px;
+			height: 260px;
+			
+			margin-top: 30px;
+			margin-left: 30px;
+		}
+
+		.pic {
+			position: relative;
+			width: 120px;
+			height: 120px;
+			
+			top: 20px;
+			left: 90px;
+		}
+
+		.type{
+			margin-top: 20px;
+			width: 240px;
+			height: 40px;
+			line-height: 40px;
+			font-size: 35px;
+			text-align: center;
+			margin-left: 30px;
+		}
+		
+		.des{
+			margin-top: 15px;
+			width: 240px;
+			height: 40px;
+			line-height: 40px;
+			font-size: 24px;
+			text-align: center;
+			margin-left: 30px;
+		}
+
+		.download {
+			position: relative;
+			width: 1200px;
+			height: 650px;
+			margin: 50px auto;
+		}
+
+		.download > h1 {
+			color: #f00;
+			font-weight: bolder;
+			letter-spacing: 10px;
+		}
+	</style>
 </head>
 <body>
-	<h1>APP</h1>
+
+	<section class="banner-wrapper">
+		<ul class="banners-container" style="margin-top: 0px;-webkit-padding-start:0px;">
+			<li><a href="#"><img src="../img/home/3.png"></a></li>
+		</ul>
+	</section>
+
+	<section class="product">
+		<h1>产品特性.</h1>
+		<div id="proContainer" class="productcontainer"></div>
+	</section>
+
+	<section class="download">
+		<h1>下载指引.</h1>
+		<div id="dowContainer" class="productcontainer"></div>
+	</section>
+
+	<script type="text/javascript">
+		var proContainer = document.getElementById("proContainer");
+		var proDataList = [
+							{
+								pic:"../img/app/app_test.png",
+								type:"品类丰富1",
+								des:"种类丰富，商品齐全",		
+							},
+							{
+								pic:"../img/app/app_test.png",
+								type:"品类丰富2",
+								des:"种类丰富，商品齐全",	
+							},
+							{
+								pic:"../img/app/app_test.png",
+								type:"品类丰富3",
+								des:"种类丰富，商品齐全",		
+							},
+							{
+								pic:"../img/app/app_test.png",
+								type:"品类丰富4",
+								des:"种类丰富，商品齐全",	
+							},
+							{
+								pic:"../img/app/app_test.png",
+								type:"品类丰富5",
+								des:"种类丰富，商品齐全",		
+							},
+							{
+								pic:"../img/app/app_test.png",
+								type:"品类丰富6",
+								des:"种类丰富，商品齐全",	
+							},
+						  ];
+
+		var lineCount = 3;
+		addLineDiv(2);
+		
+		var childs = proContainer.childNodes;
+		console.log(childs.length+"===="+childs[0]);
+
+		function addLineDiv(count){
+			for(var i =0;i < count; i++){
+				console.log("count"+count);
+				var divLine = document.createElement('div');
+
+				divLine.className="divline";
+				proContainer.appendChild(divLine);	
+			}
+		}
+		//直接在程序中加入会只存在一个DIV ????????????????????
+		for(var i =1;i<=lineCount;i++){
+			for(var j =0;j<lineCount;j++){
+				var count = (i-1)*3+j;
+				var divItem = addItemDiv(proDataList[count]);
+				console.log(divItem);
+				childs[i].appendChild(divItem);
+			}
+		}
+
+
+
+		function addItemDiv(data){
+			console.log("data:"+data);
+			var divItem = document.createElement('div');
+			divItem.className ="divitem";
+			//添加内容
+			var pic = document.createElement("img");
+			pic.src = data.pic;
+			pic.className = "pic";
+
+			var type = document.createElement("h1");
+			type.innerHTML = data.type;
+			type.className = "type";
+			
+			var des = document.createElement("h2");
+			des.innerHTML =data.des;
+			des.className = "des";
+
+			divItem.appendChild(pic);
+			divItem.appendChild(type);
+			divItem.appendChild(des);
+
+			return divItem;
+		}
+
+
+
+
+	</script>
 </body>
 </html>

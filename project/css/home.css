@@ -1,72 +1,122 @@
-.banner{
+
+.banners-container
+{
+    position: absolute;
+    z-index: 1;
+
+    overflow: hidden;
+
+    width: 7000px;
+    height: 630px;
+}
+
+.banner-wrapper
+{
+    position: relative;
+    /*            border:2px solid black;
+*/  z-index: 3;
+
+    overflow: hidden;
+
+    width: 1400px;
+    height: 630px;
+    margin: 0 auto;
+}
+
+.banner-wrapper img
+{
+    float: left;
+
+    width: 1400px;
+    height: 650px;
+    margin-top: 5px;
+    padding-left: 0;
+}
+
+
+li
+{
+    list-style: none;
+}
+
+
+/*.banner > img {
 	position: relative;
 	width: 1400px;
 	height: 650px;
-	margin: 0 auto;
+}*/
+
+.state
+{
+    position: relative;
+	
+    width: 1400px;
+    height: 200px;
+    margin-top: 10px;
+    margin-right: auto;
+    margin-bottom: 10px;
+    margin-left: auto;;
 }
 
-.banner > img {
-	position: relative;
-	width: 1400px;
-	height: 650px;
+.state > dl
+{
+    position: relative;
+
+    width: 1400px;
+    height: 200px;
 }
 
-.state {
-	position: relative;
-	width: 1400px;
-	height: 200px;
-	margin-top: 10px;
-	margin-bottom: 10px;
-	margin-left: auto;
-	margin-right: auto;;
+.state > dl > dt
+{
+    position: relative;
+
+    float: left;
+
+    width: 280px;
+    height: 200px;
 }
 
-.state > dl{
-	position: relative;
-	width: 1400px;
-	height: 200px;
+.state > dl > dt > img
+{
+    width: 260px;
+    height: 200px;
+    margin-left: 10px;
 }
 
-.state > dl >dt {
-	position: relative;
-	float: left;
-	width: 280px;
-	height: 200px;
+.contact > dl
+{
+    position: relative;
+
+    width: 335px;
+    height: 48px;
+    margin-left: 10px;
 }
 
-.state > dl > dt >img{
-	width: 260px;
-	height: 200px;
-	margin-left: 10px;
+.contact > dl > dt
+{
+    position: absolute;
+    top: 0;
+    left: 20px;
+
+    width: 40px;
+    height: 18px;
 }
 
-.contact > dl {
-	position: relative;
-	height: 48px;
-	width: 335px;
-	margin-left: 10px;
+.contact > dl > dd
+{
+    font-size: 24px;
+    font-weight: bold;
+    line-height: 20px;
+
+    position: absolute;
+    top: 10px;
+    left: 20px;
+
+    width: 200px;
+    height: 18px;
+
+    text-align: center;
+    letter-spacing: 5px;
+
+    color: #666;
 }
-
-.contact > dl > dt {
-	position: absolute;
-	width: 40px;
-	height: 18px;
-	left: 20px;
-	top: 0px;
-}
-
-.contact > dl > dd{
-	position: absolute;
-	width: 200px;
-	height: 18px;
-	font-size: 24px;
-	color: #666666;
-	font-weight: bold;
-	line-height: 20px;
-	text-align: center;
-	left: 20px;
-	letter-spacing: 5px;
-	top: 10px;
-
-}
-

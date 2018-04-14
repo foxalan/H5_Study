@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+
+	<div id="box">
+		<span>Iphone6s</span>
+		<input type="button" id="btn" value="删除">
+	</div>
+	<script type="text/javascript">
+
+		var btn = document.getElementById("btn");
+		btn.onclick = function(){
+			var result = window.confirm("sure");
+
+		}
+
+		//间歇调用
+		//setIntervar(code,millisec);
+		//clearIntervar(id)
+
+		var intervarId = setInterval(function(){
+			console.log("intervar");
+		},1000);
+
+		setTimeout(function(){
+			clearInterval(intervarId);
+		},10000);
+
+
+		//location
+
+		console.log(location.href);
+
+	</script>
+</body>
+</html>

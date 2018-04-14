@@ -61,26 +61,27 @@ header > .container > h1{
 	width: 145px;
 }
 
-.index > div > a:link{
+/*.index > div > a:link{
 	color: rgba(66,165,246,0.81494140625);
 	background-color: #FFF;
-}
+}*/
 
-.index > div > a:visited{
+/*.index > div > a:visited{
 	color: rgba(66,165,246,0.81494140625);
 	background-color: #FFF;
-}
+}*/
 
 .index > div > a:hover{
 	color: rgba(66,165,246,0.81494140625);
 	background-color: #FFF;
+	cursor:pointer;
 }
 
-.index > div > a:active{
+/*.index > div > a:active{
 	color: rgba(66,165,246,0.81494140625);
 	background-color: #FFF;
 
-}
+}*/
 
 
 .body{
