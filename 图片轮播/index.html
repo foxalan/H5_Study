@@ -102,6 +102,15 @@
     		startAutoPlay();
     	}
 
+    	// 点击导航切换
+    	for(var i=0,len=dots.length;i<len;i++){
+      		dots[i].id = i;
+       		dots[i].onclick = function(){
+           		index = this.id;
+           		changeImg();
+       		}
+    	}
+
 	</script>
 </body>
 </html>
