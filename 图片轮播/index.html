@@ -4,9 +4,381 @@
 	<meta charset="UTF-8">
 	<title>Document</title>
 	<link rel="stylesheet" type="text/css" href="css/style.css">
+
+	<style type="text/css">
+
+		.menu-box {
+			background:rgba(7, 17, 27, 0.5);
+			opacity: 0.5;
+			position: absolute;
+			left: 0px;
+			top: 0px;
+			width: 244px;
+			height: 460px;
+			z-index: 1;
+		}
+
+		.menu-content{
+			position: absolute;
+			padding-top: 8px;
+			top: 0;
+			left: 0;
+			width: 244px;
+			height: 460px;
+			z-index: 2;
+		}
+
+		.menu-item{
+			height: 64px;
+			line-height: 66px;
+			font-size: 12px;
+			cursor: pointer;
+			padding: 0 24px;
+			position: relative;
+			left: 0px;
+			top: 0px;
+		}
+
+		.menu-item a{
+			display: block;
+			color: #fff;
+			padding: 0 8px;
+			border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+			height: 63px;
+			font-size:16px;
+		}
+
+		.menu-item:last-child a{
+			border-bottom:none;
+		}
+
+		.menu-item i{
+			position: absolute;
+			right: 32px;
+			color: rgba(255,255,255,0.5);
+			font-size: 24px;
+    		top: 2px;
+    		font-style:normal;
+    		font-weight:normal;
+    		font-family:"iconfont";
+		}
+
+
+/*		内容
+*/
+		.sub-menu {
+			border:1px solid #d9dde1;
+			background:#fff;
+			position: absolute;
+			left: 244px;
+			top: 0px;
+			width: 730px;
+			height: 458px;
+			z-index: 581;
+			box-shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0.1);
+		}
+
+		.hide{
+			display:none;
+		}
+
+		.inner-box{
+			width:100%;
+			height:100%;
+			background:url(../img/fe.png) no-repeat;
+			display:none;
+		}
+
+		.sub-inner-box{
+			width: 652px;
+			margin-left: 40px;
+			overflow: hidden;
+		}
+
+		.title{
+			color: #f01414;
+			font-size: 16px;
+			line-height: 16px;
+			margin-top: 28px;
+			font-weight: bold;
+			margin-bottom: 30px;
+		}
+
+		.sub-row{
+			margin-bottom:25px;
+		}
+
+		.bold{
+			font-weight:700;
+		}
+
+		.mr10{
+			margin-right:10px;
+		}
+
+		.ml10{
+			margin-left:10px;
+		}
+
+		
+	</style>
 </head>
 <body>
+
 	<section class="main" id="main">
+
+		<div class="menu-box">
+			
+		</div>
+
+		<div class="sub-menu hide" id="sub-menu">
+			<div class="inner-box">
+				<div class="sub-inner-box">
+					<div class="title">手机、配件</div>
+					<div class="sub-row">
+						<span class="bold mr10">手机通讯：</span>
+						<a href="">手机</a>
+						<span class="ml10 mr10">/</span>
+						<a href="">手机维修</a>
+						<span class="ml10 mr10">/</span>
+						<a href="">以旧换新</a>
+					</div>
+					<div class="sub-row">
+						<span class="bold mr10">手机配件：</span>
+						<a href="">手机壳</a>
+						<span class="ml10 mr10">/</span>
+						<a href="">手机存储卡</a>
+						<span class="ml10 mr10">/</span>
+						<a href="">数据线</a>
+						<span class="ml10 mr10">/</span>
+						<a href="">充电器</a>
+						<span class="ml10 mr10">/</span>
+						<a href="">电池</a>
+					</div>
+					<div class="sub-row">
+						<span class="bold mr10">运营商：</span>
+						<a href="">中国联通</a>
+						<span class="ml10 mr10">/</span>
+						<a href="">中国移动</a>
+						<span class="ml10 mr10">/</span>
+						<a href="">中国电信</a>
+					</div>
+					<div class="sub-row">
+						<span class="bold mr10">智能设备：</span>
+						<a href="">智能手环</a>
+						<span class="ml10 mr10">/</span>
+						<a href="">智能家居</a>
+						<span class="ml10 mr10">/</span>
+						<a href="">智能手表</a>
+						<span class="ml10 mr10">/</span>
+						<a href="">其他配件</a>
+					</div>
+					<div class="sub-row">
+						<span class="bold mr10">娱乐：</span>
+						<a href="">耳机</a>
+						<span class="ml10 mr10">/</span>
+						<a href="">音响</a>
+						<span class="ml10 mr10">/</span>
+						<a href="">收音机</a>
+						<span class="ml10 mr10">/</span>
+						<a href="">麦克风</a>
+					</div>
+				</div>
+			</div>
+			<div class="inner-box">
+				<div class="sub-inner-box">
+					<div class="title">电脑</div>
+					<div class="sub-row">
+                       <span class="bold mr10">电脑：</span>
+                       <a href="">笔记本</a>
+                       <span class="ml10 mr10">/</span>
+                       <a href="">平板</a>
+                       <span class="ml10 mr10">/</span>
+                       <a href="">一体机</a>
+					</div>
+					<div class="sub-row">
+                       <span class="bold mr10">电脑配件：</span>
+                       <a href="">显示器</a>
+                       <span class="ml10 mr10">/</span>
+                       <a href="">CPU</a>
+                       <span class="ml10 mr10">/</span>
+                       <a href="">主板</a>
+                       <span class="ml10 mr10">/</span>
+                       <a href="">硬盘</a>
+                       <span class="ml10 mr10">/</span>
+                       <a href="">电源</a>
+                       <span class="ml10 mr10">/</span>
+                       <a href="">显卡</a>
+                       <span class="ml10 mr10">/</span>
+                       <a href="">其他配件</a>
+					</div>
+					<div class="sub-row">
+                       <span class="bold mr10">游戏设备：</span>
+                       <a href="">游戏机</a>
+                       <span class="ml10 mr10">/</span>
+                       <a href="">耳机</a>
+                       <span class="ml10 mr10">/</span>
+                       <a href="">游戏软件</a>
+					</div>
+					<div class="sub-row">
+                       <span class="bold mr10">网络产品：</span>
+                       <a href="">路由器</a>
+                       <span class="ml10 mr10">/</span>
+                       <a href="">网络机顶盒</a>
+                       <span class="ml10 mr10">/</span>
+                       <a href="">交换机</a>
+                       <span class="ml10 mr10">/</span>
+                       <a href="">存储卡</a>
+                       <span class="ml10 mr10">/</span>
+                       <a href="">网卡</a>
+					</div>
+					<div class="sub-row">
+                       <span class="bold mr10">外部产品：</span>
+                       <a href="">鼠标</a>
+                       <span class="ml10 mr10">/</span>
+                       <a href="">键盘</a>
+                       <span class="ml10 mr10">/</span>
+                       <a href="">U盘</a>
+                       <span class="ml10 mr10">/</span>
+                       <a href="">移动硬盘</a>
+                       <span class="ml10 mr10">/</span>
+                       <a href="">鼠标垫</a>
+                       <span class="ml10 mr10">/</span>
+                       <a href="">电脑清洁</a>
+					</div>
+				</div>
+			</div>
+			<div class="inner-box">
+				<div class="sub-inner-box">
+					<div class="title">家用电器</div>
+					<div class="sub-row">
+                       <span class="bold mr10">电视：</span>
+                       <a href="">国产品牌</a>
+                       <span class="ml10 mr10">/</span>
+                       <a href="">韩国品牌</a>
+                       <span class="ml10 mr10">/</span>
+                       <a href="">欧美品牌</a>
+					</div>
+					<div class="sub-row">
+                       <span class="bold mr10">空调：</span>
+                       <a href="">显示器</a>
+                       <span class="ml10 mr10">/</span>
+                       <a href="">柜式</a>
+                       <span class="ml10 mr10">/</span>
+                       <a href="">中央</a>
+                       <span class="ml10 mr10">/</span>
+                       <a href="">壁挂式</a>
+					</div>
+					<div class="sub-row">
+                       <span class="bold mr10">冰箱：</span>
+                       <a href="">多门</a>
+                       <span class="ml10 mr10">/</span>
+                       <a href="">对开门</a>
+                       <span class="ml10 mr10">/</span>
+                       <a href="">三门</a>
+                       <span class="ml10 mr10">/</span>
+                       <a href="">双门</a>
+					</div>
+					<div class="sub-row">
+                       <span class="bold mr10">洗衣机：</span>
+                       <a href="">滚筒式洗衣机</a>
+                       <span class="ml10 mr10">/</span>
+                       <a href="">迷你洗衣机</a>
+                       <span class="ml10 mr10">/</span>
+                       <a href="">洗烘一体机</a>
+					</div>
+					<div class="sub-row">
+                       <span class="bold mr10">厨房电器：</span>
+                       <a href="">油烟机</a>
+                       <span class="ml10 mr10">/</span>
+                       <a href="">洗碗机</a>
+                       <span class="ml10 mr10">/</span>
+                       <a href="">燃气灶</a>
+					</div>
+				</div>
+			</div>
+			<div class="inner-box">
+				<div class="sub-inner-box">
+					<div class="title">家具</div>
+					<div class="sub-row">
+                       <span class="bold mr10">家纺：</span>
+                       <a href="">被子</a>
+                       <span class="ml10 mr10">/</span>
+                       <a href="">枕头</a>
+                       <span class="ml10 mr10">/</span>
+                       <a href="">四件套</a>
+                       <span class="ml10 mr10">/</span>
+                       <a href="">床垫</a>
+					</div>
+					<div class="sub-row">
+                       <span class="bold mr10">灯具：</span>
+                       <a href="">台灯</a>
+                       <span class="ml10 mr10">/</span>
+                       <a href="">顶灯</a>
+                       <span class="ml10 mr10">/</span>
+                       <a href="">节能灯</a>
+                       <span class="ml10 mr10">/</span>
+                       <a href="">应急灯</a>
+					</div>
+					<div class="sub-row">
+                       <span class="bold mr10">厨具：</span>
+                       <a href="">烹饪锅具</a>
+                       <span class="ml10 mr10">/</span>
+                       <a href="">餐具</a>
+                       <span class="ml10 mr10">/</span>
+                       <a href="">菜板刀具</a>
+					</div>
+					<div class="sub-row">
+                       <span class="bold mr10">家装：</span>
+                       <a href="">地毯</a>
+                       <span class="ml10 mr10">/</span>
+                       <a href="">沙发垫套</a>
+                       <span class="ml10 mr10">/</span>
+                       <a href="">装饰字画</a>
+                       <span class="ml10 mr10">/</span>
+                       <a href="">照片墙</a>
+                       <span class="ml10 mr10">/</span>
+                       <a href="">窗帘</a>
+					</div>
+					<div class="sub-row">
+                       <span class="bold mr10">生活日用：</span>
+                       <a href="">收纳用品</a>
+                       <span class="ml10 mr10">/</span>
+                       <a href="">浴室用品</a>
+                       <span class="ml10 mr10">/</span>
+                       <a href="">雨伞雨衣</a>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+
+		<div class="menu-content" id="menu-content">
+			<div class="menu-item">
+				<a href="">
+					<span>手机、配件</span>
+					<i class="icon">&#xe665;</i>
+				</a>
+			</div>
+			<div class="menu-item">
+				<a href="">
+					<span>电脑</span>
+					<i class="icon">&#xe665;</i>
+				</a>
+			</div>
+			<div class="menu-item">
+				<a href="">
+					<span>家用电器</span>
+					<i class="icon">&#xe665;</i>
+				</a>
+			</div>
+			<div class="menu-item">
+				<a href="">
+					<span>家具</span>
+					<i class="icon">&#xe665;</i>
+				</a>
+			</div>
+		</div>
 
 		<div class="banner" id="banner">
 			<a href="#">
@@ -33,6 +405,7 @@
 
 
 	<script type="text/javascript">
+		
 		var banner = document.getElementById("banner");
 		var pics = banner.getElementsByTagName("div");
 
@@ -44,13 +417,13 @@
 		// 图片自动轮播
 		startAutoPlay();
 		function startAutoPlay(){
-   				timer = setInterval(function(){
+   			timer = setInterval(function(){
        			index++;
        			if(index >= size){
           			index = 0;
        			}
        			changeImg();
-   		  	},3000)
+   		  	},3000);
 		}
 
 		function changeImg(){
@@ -74,7 +447,7 @@
 		var btnNext = document.getElementById("next");
 
 		btnPrev.onclick = function(){
-			cancelAutoPlay();
+		
 			if(index == 0){
 				index = 2;
 			}else{
@@ -84,7 +457,7 @@
 		}
 
 		btnNext.onclick = function(){
-			cancelAutoPlay();
+			
 			if(index == (size-1)){
 				index = 0;
 			}else{
@@ -95,6 +468,7 @@
 
 		//设置事件监听
 		var main = document.getElementById("main");
+
 		main.onmouseover = function(){
     		cancelAutoPlay();
     	}
@@ -109,6 +483,44 @@
            		index = this.id;
            		changeImg();
        		}
+    	}
+
+
+    	var	menuItems = byId("menu-content").getElementsByTagName("div"),
+    		subMenu = byId("sub-menu"),
+    		subItems = subMenu.getElementsByClassName("inner-box");
+    	var menuContent = byId("menu-content");
+
+		function byId(id){
+			return typeof(id)==="string"?document.getElementById(id):id;
+		}
+
+
+		// 菜单
+    	for(var m=0,mlen=menuItems.length;m<mlen;m++){
+        	menuItems[m].setAttribute("data-index",m);
+        	menuItems[m].onmouseover = function(){
+            subMenu.className = "sub-menu";
+            var idx = this.getAttribute("data-index");
+            for(var j=0,jlen=subItems.length;j<jlen;j++){
+               subItems[j].style.display = 'none';
+               menuItems[j].style.background = "none";
+            }
+            subItems[idx].style.display = "block";
+            menuItems[idx].style.background = "rgba(0,0,0,0.1)";
+        	}
+    	}
+
+		subMenu.onmouseover = function(){
+     	   this.className = "sub-menu";
+    	}
+
+    	subMenu.onmouseout = function(){
+        	this.className = "sub-menu hide";
+    	}
+
+    	menuContent.onmouseout = function(){
+        	subMenu.className = "sub-menu hide";
     	}
 
 	</script>

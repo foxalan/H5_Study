@@ -9,11 +9,23 @@ ul
     list-style: none;
 }
 
+a{
+    text-decoration: none;
+}
+
 body
 {
     font-family: '微软雅黑';
 
     color: #14191e;
+}
+
+@font-face {font-family: 'iconfont';
+    src: url('../img/font/iconfont.eot'); 
+    src: url('../img/font/iconfont.eot') format('embedded-opentype'),
+    url('../img/font/iconfont.woff') format('woff'),
+    url('../img/font/iconfont.ttf') format('truetype'),
+    url('../img/font/iconfont.svg#iconfont') format('svg');
 }
 
 .main
