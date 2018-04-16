@@ -185,20 +185,30 @@
 		
 		var childs = proContainer.childNodes;
 		console.log(childs.length+"===="+childs[0]);
+		childs[0].style.background = "red";
+		childs[1].style.background = "#abcdef";
+
+		// childs[0].appendChild(addItemDiv(proDataList[0]));
+		// childs[0].appendChild(addItemDiv(proDataList[1]));
+		// childs[0].appendChild(addItemDiv(proDataList[2]));
+		// childs[1].appendChild(addItemDiv(proDataList[3]));
+		// childs[1].appendChild(addItemDiv(proDataList[4]));
+		// childs[1].appendChild(addItemDiv(proDataList[5]));
+
 
 		function addLineDiv(count){
 			for(var i =0;i < count; i++){
 				console.log("count"+count);
 				var divLine = document.createElement('div');
-
 				divLine.className="divline";
 				proContainer.appendChild(divLine);	
 			}
 		}
 		//直接在程序中加入会只存在一个DIV ????????????????????
-		for(var i =1;i<=lineCount;i++){
+		for(var i =0;i<childs.length;i++){
 			for(var j =0;j<lineCount;j++){
-				var count = (i-1)*3+j;
+				var count = i*3+j;
+				console.log(count+"=================================");
 				var divItem = addItemDiv(proDataList[count]);
 				console.log(divItem);
 				childs[i].appendChild(divItem);
