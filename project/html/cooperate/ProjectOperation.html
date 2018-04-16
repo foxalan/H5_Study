@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>员工</title>
+
+	<style type="text/css">
+		*{font-family:微软雅黑;margin: 0;padding: 0;border: none;}
+
+		.title{
+			color: #F00;
+			font-weight: bolder;
+			letter-spacing: 8px;
+			font-size: 30px;
+		}
+
+		table {
+			position: relative;
+			width: 860px;
+			margin-top: 20px;
+		}
+
+		table > tbody {
+			position: relative;
+			width: 860px;
+			height: 600px;
+		
+		}
+
+		table >tbody>tr{
+			display: table;
+			position: relative;
+			margin-top: 10px;
+			width: 800px;
+			height: 120px;
+			
+		}
+		
+		table > tbody > tr > td:nth-child(1){
+			position: absolute;
+			left: 10px;
+			top: 10px;
+		}
+
+		table>tbody>tr>td:nth-child(2){
+			position: absolute;
+			left: 165px;
+			top: 10px;
+		}
+
+		table>tbody>tr>td:nth-child(3){
+			position: absolute;
+			left: 165px;
+			top: 40px;
+		}
+
+		table>tbody>tr>td:nth-child(4){
+			position: absolute;
+			left: 165px;
+			top: 100px
+		}
+
+		table>tbody>tr>td:nth-child(5){
+			position: absolute;
+			right: 0;
+			top: 10px;
+		}
+
+		.control{
+			display: none;
+			margin-top: 30px;
+			margin-left: 30px;
+		}
+
+		.choosea{
+			line-height: 20px;
+			font-size: 20px;
+			letter-spacing: 10px;
+			text-decoration: none;
+		}
+	</style>
+
+</head>
+<body>
+
+
+	<p id="title" class="title">员工风采.</p>
+		
+		<table>
+
+			<tbody id="tbMain"></tbody> 
+		</table>
+
+		<section class="control">
+			<h3 id="choose">
+				
+		   	</h3>
+		</section>
+
+
+		<script type="text/javascript">
+			 var tbody = document.getElementById('tbMain');  
+			 var choose = document.getElementById('choose');
+			 var currentPage = 0;
+			 var pageCount =4;
+			 var totalCount;
+			 
+		     var per = [  
+           			{
+           				pos:"../../img/trends/trends.jpg",
+           				title:"才茂生鲜市场",
+           				content:'感谢您关注源本圣逛市场！如果您尚未关注，还可以点击内容下方的二维码，扫一扫，立刻关注我们才茂生鲜市场武汉才茂生鲜市..',
+           				tag:'[市场信息][市场拓展]',
+           				time:'2018-03-28',
+           			},  
+            		{
+            			pos:"../../img/trends/trends.jpg",
+            			title:"胜强生鲜市场",
+            			content:'↑↑↑李斯关注我们的人饮食都不会太差感谢您关注源本圣逛市场！如果您尚未关注，还可以点击内容下方的二维码，扫一扫，立刻关...',
+            			tag:'[企业文化]',
+            			time:'2018-01-11',
+            		},  
+            		
+            		];  
+
+            var currentPer = [
+            		{
+           				pos:"../../img/trends/trends.jpg",
+           				title:"才茂生鲜市场",
+           				content:'感谢您关注源本圣逛市场！如果您尚未关注，还可以点击内容下方的二维码，扫一扫，立刻关注我们才茂生鲜市场武汉才茂生鲜市...',
+           				tag:'[市场信息][市场拓展]',
+           				time:'2018-03-28',
+           			},  
+            		{
+            			pos:"../../img/trends/trends.jpg",
+            			title:"胜强生鲜市场",
+            			content:'↑↑↑李斯关注我们的人饮食都不会太差感谢您关注源本圣逛市场！如果您尚未关注，还可以点击内容下方的二维码，扫一扫，立刻关...',
+            			tag:'[企业文化]',
+            			time:'2018-01-11',
+            		},  
+            		];
+
+           	//待优化
+            totalCount = (per.length/pageCount)+1;
+            addChild(totalCount);
+        	//添加子元素
+			function addChild(l){
+				var start = document.createElement('a');
+				start.innerHTML = "上一页";
+				start.href = "#";
+				choose.appendChild(start);
+				for(var i =1;i<=l;i++){
+					var tag = document.createElement('a');
+					tag.innerHTML = i;
+					tag.href = "#";
+					choose.appendChild(tag);
+				}
+				var end = document.createElement('a');
+				end.innerHTML = "下一页";
+				end.href = "#";
+				choose.appendChild(end);
+			}
+			var list = document.getElementsByTagName("a");
+			console.log("list length:"+list.length);
+			for(var i =0;i<list.length;i++){
+				list[i].className = "choosea";
+				list[i].onclick = function(){
+					var value = this.textContent;
+
+					if (value == "上一页") {
+						
+						if (currentPage!=0) {
+							currentPage = currentPage - 1;
+						}
+					}else if(value == "下一页"){
+						if(currentPage!=(list.length-3)){
+								currentPage = currentPage + 1;
+							}
+					}else {
+						currentPage = value -1;
+					}
+
+					onChoose(currentPage,pageCount);
+					console.log(i+"==============="+this.textContent);
+				}
+			}
+			console.log(list);
+			var childs = choose.childNodes;
+			
+
+			// var childs = tbody.childNodes; 
+			// //清除所有的子元素 
+			for(var i=0;i<per.length;i++){
+				console.log("per的子项为："+per[i]);
+			}
+
+   			onChoose(currentPage,pageCount);  
+
+   			function onChoose(po,length){
+   				console.log("po:"+po+"         length:"+length);
+   				while(tbody.lastChild) 
+    			{  
+        			tbody.removeChild(tbody.lastChild);  
+    			}
+   				var start = po *length;
+   				var end = start+length;
+   				var length = currentPer.length;
+   			
+   				for(var i=0;i<length;i++){
+
+   					currentPer.pop();
+   				}
+
+   			//	currentPer.splice(0,currentPer.length);
+   				
+   				for(var i=start;i<end;i++){
+
+   					console.log(i+"per的元素为："+per[i]);
+   					currentPer.push(per[i]);
+   					console.log("per");
+   				}
+   				
+   				console.log(currentPer+"===="+per);
+
+   				for(var i = 0;i < currentPer.length; i++)
+   				{   
+          			var trow = getDataRow(currentPer[i]);   
+          			tbody.appendChild(trow);  
+				}  
+
+			}
+
+			//添加元素内容
+			function getDataRow(h){  
+     			var row = document.createElement('tr'); //创建行  
+     			
+     			row.style.display = "table";
+				row.style.position =  "relative";
+				row.style.marginTop = "10px";
+				row.style.width = "800px";
+				row.style.height = "120px";
+
+				//创建第一列id 加入图片 
+     			var imgCell = document.createElement('td');
+     			var tdimg = document.createElement('img');
+				tdimg.style.width= "150px";
+     			tdimg.style.height= "121px";
+
+				imgCell.style.position ="absolute";
+				imgCell.style.left = "10px";
+				imgCell.style.top= "10px";
+
+				tdimg.src=h.pos;
+				imgCell.appendChild(tdimg);
+     			row.appendChild(imgCell); //加入行  ，下面类似  
+       
+     			//加入第二列
+
+				var titleCell = document.createElement('td');//创建第二列name  
+				var title = document.createElement('h3');
+				titleCell.style.position="absolute";
+				titleCell.style.left="165px";
+				titleCell.style.top= "10px";
+				title.style.fontSize = "20px";
+				title.style.border= "2px";
+
+				title.innerHTML = h.title;
+				titleCell.appendChild(title);
+				row.appendChild(titleCell);  
+       
+     			//加入第三列
+       			var conCell = document.createElement('td');
+     			var con = document.createElement('p');
+
+     			conCell.style.position= "absolute";
+				conCell.style.left="165px";
+				conCell.style.top= "40px";
+
+				con.innerHTML = h.content;
+				conCell.appendChild(con);
+				row.appendChild(conCell);
+
+				//加入第4列
+       			var tagCell = document.createElement('td');
+     			var tag = document.createElement('h5');
+
+     			tagCell.style.position= "absolute";
+				tagCell.style.left="165px";
+				tagCell.style.top= "100px";
+
+				tag.style.fontSize="10px";
+				tag.innerHTML = h.tag;
+				tagCell.appendChild(tag);
+				row.appendChild(tagCell);
+
+       			//加入第5列
+       			var timeCell = document.createElement('td');
+     			
+     			timeCell.style.position= "absolute";
+				timeCell.style.right="0px";
+				timeCell.style.top= "10px";
+
+				timeCell.innerHTML = h.time;
+				row.appendChild(timeCell);
+
+     			return row; //返回tr数据      
+    		}      
+
+		</script>
+	
+</body>
+</html>

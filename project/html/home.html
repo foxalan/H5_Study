@@ -18,13 +18,32 @@
             z-index:3;
         }
         .banner-wrapper .next {
-            right:0;
-            background:url("../img/about/arrow.jpg") no-repeat 0 -48px;
+            width: 32px;
+            height: 60px;
+            right:30px;
+            background:url("../img/arrow.png") center center no-repeat;
         }
+
         .banner-wrapper .prev {
-            left:0;
-            background:url("../img/about/arrow.jpg") no-repeat;
+            transform: rotate(180deg);
+            width: 32px;
+            height: 60px;
+            left:30px;
+            background:url("../img/arrow.png") center center no-repeat;
         }
+
+        .next:hover{
+            background-color:#333;
+            opacity: 0.8;
+            filter:alpha(opacity=80);
+        }
+
+        .prev:hover{
+            background-color: #333;
+            opacity: 0.8;
+            filter: alpha(opacity=80);
+        }
+
 	</style>
 </head>
 <body>
@@ -39,7 +58,7 @@
 			<li><a href="#"><img src="../img/home/1.png"></a></li>
 		</ul>
 
-		 <a class="next btn" href="#"></a>
+		<a class="next btn" href="#"></a>
     	<a class="prev btn" href="#"></a>
 		
 	</section>

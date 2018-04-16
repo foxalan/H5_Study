@@ -56,15 +56,14 @@
 
 		.productcontainer{
 			position: relative;
-		
-			width: 1000px;
+			width: 1200px;
 			margin: 0 auto;
 		}
 
 		.divline{
 			position: relative;
 			display: table-cell;
-			width: 1000px;
+			width: 1100px;
 			height: 325px;
 			display: table;
 			
@@ -90,7 +89,7 @@
 			height: 120px;
 			
 			top: 20px;
-			left: 90px;
+			left: 130px;
 		}
 
 		.type{
@@ -100,7 +99,7 @@
 			line-height: 40px;
 			font-size: 35px;
 			text-align: center;
-			margin-left: 30px;
+			margin-left: 70px;
 		}
 		
 		.des{
@@ -110,7 +109,7 @@
 			line-height: 40px;
 			font-size: 24px;
 			text-align: center;
-			margin-left: 30px;
+			margin-left: 70px;
 		}
 
 		.download {
@@ -125,6 +124,85 @@
 			font-weight: bolder;
 			letter-spacing: 10px;
 		}
+
+		.productcontainer{
+			position: relative;
+			width: 1200px;
+			height: 650px;
+			margin: 0 auto;
+			overflow: hidden;
+		}
+		.picductcontainer{
+			position: relative;
+			width: 1200px;
+			height: 540px;
+			margin: 0 auto;
+			overflow: hidden;
+		}
+
+
+		.picdiv{
+			position: absolute;
+			background-size:cover;
+			width: 1200px;
+			height: 540px;
+			left: 0;
+			top: 0;
+		}
+
+		.picContainer{
+			position: absolute;
+			left: 0;
+			top: 0;
+			width: 1200px;
+			height: 540px;
+			z-index: 1;
+			background-color: #abcdef;
+		}
+
+		.dotsContainer {
+			position: absolute;
+			left: 0;
+			bottom: 0;
+			width: 1200px;
+			height: 60px;
+			z-index: 2;
+			background-color:#333;
+    		opacity: 0.8;
+    		filter:alpha(opacity=80);
+    		padding-left: 500px;
+    		margin-top: 40px;
+
+		}
+
+		 .divspan{
+    		display: inline-block;
+    		width: 12px;
+    		height: 12px;
+    		border-radius: 50%;
+    		margin-left: 50px;
+    		margin-top: 20px;
+    		background-color: rgba(7, 17, 27, 0.4);
+    		cursor: pointer;
+    		box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.8) inset;
+    		z-index: 3;
+		}
+
+		.divspan:active{
+			display: inline-block;
+    		width: 12px;
+    		height: 12px;
+    		border-radius: 50%;
+    		margin-left: 50px;
+    		margin-top: 20px;
+    		background-color: #f00;
+    		cursor: pointer;
+    		box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.8) inset;
+			z-index: 3;
+		}
+
+
+
 	</style>
 </head>
 <body>
@@ -142,10 +220,81 @@
 
 	<section class="download">
 		<h1>下载指引.</h1>
-		<div id="dowContainer" class="productcontainer"></div>
+		<div id="dowContainer" class="picductcontainer">
+			<div id="picContainer" class="picContainer">
+				
+			</div>
+
+			<div id="dotsContainer" class="dotsContainer">
+				
+			</div>
+		</div>
 	</section>
 
 	<script type="text/javascript">
+
+		var picDataList = ["../img/app/step1.jpg","../img/app/step2.jpg","../img/app/step3.jpg"];
+		var picContainer = document.getElementById("picContainer");
+		var index = 0;
+		//1：动态添加图片
+		addPicChild();
+		function addPicChild(){
+			for(var i =0;i<picDataList.length;i++){
+
+				var picDiv = document.createElement("div");
+				picDiv.className = "picdiv";
+				picDiv.style.background = "url("+picDataList[i]+")";
+				//保持图片缩放
+				picDiv.style.backgroundSize = "cover";
+				picContainer.appendChild(picDiv);
+			}
+
+		}
+
+		//2：动态添加dots
+		var dotsContainer = document.getElementById("dotsContainer");
+		function addDotsChild(){
+			for(var i =0;i<picDataList.length;i++){
+				var dotSpan = document.createElement("span");
+				dotSpan.className = "divspan";
+				dotsContainer.appendChild(dotSpan);
+			}
+		}
+
+		addDotsChild();
+
+		//3：设置点击事件
+
+		var dotsChilds = dotsContainer.getElementsByTagName("span");
+
+		var picChilds = picContainer.getElementsByTagName("div");
+		console.log(dotsChilds.length +"===="+picChilds);
+		for(var i = 0; i<dotsChilds.length;i++){
+			dotsChilds[i].setAttribute("position",i);
+
+			dotsChilds[i].onclick = function(){
+				var currentIndex = this.getAttribute("position");
+				index = currentIndex;
+				console.log("index:"+index);
+				changeImg();
+			}	
+		}
+
+		function changeImg(){
+			for(var i = 0; i<dotsChilds.length;i++){
+				picChilds[i].style.display = "none";
+			//	dotsChilds[i].className ="";
+			    dotsChilds[i].style.backgroundColor = "rgba(7, 17, 27, 0.4)";
+			}
+
+			picChilds[index].style.display = "block";
+			dotsChilds[index].style.backgroundColor = "#f00";
+		}
+
+		//4:设置初始的页面
+		changeImg();
+
+
 		var proContainer = document.getElementById("proContainer");
 		var proDataList = [
 							{
@@ -185,16 +334,7 @@
 		
 		var childs = proContainer.childNodes;
 		console.log(childs.length+"===="+childs[0]);
-		childs[0].style.background = "red";
-		childs[1].style.background = "#abcdef";
-
-		// childs[0].appendChild(addItemDiv(proDataList[0]));
-		// childs[0].appendChild(addItemDiv(proDataList[1]));
-		// childs[0].appendChild(addItemDiv(proDataList[2]));
-		// childs[1].appendChild(addItemDiv(proDataList[3]));
-		// childs[1].appendChild(addItemDiv(proDataList[4]));
-		// childs[1].appendChild(addItemDiv(proDataList[5]));
-
+		
 
 		function addLineDiv(count){
 			for(var i =0;i < count; i++){
