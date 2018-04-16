@@ -2,9 +2,225 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>招贤</title>
+	<title>招商合作</title>
+	<link rel="stylesheet" type="text/css" href="../css/home.css">
+	<link rel="stylesheet" type="text/css" href="../css/about.css">
+	<style type="text/css">
+		
+		.banner-wrapper .btn {
+            position:absolute;
+            top:300px;
+            display:block;
+            width:24px;
+            height:48px;
+            -moz-opacity:.5;
+            opacity:.5;
+            z-index:3;
+        }
+        .banner-wrapper .next {
+            width: 32px;
+            height: 60px;
+            right:30px;
+            background:url("../img/arrow.png") center center no-repeat;
+        }
+
+        .banner-wrapper .prev {
+            transform: rotate(180deg);
+            width: 32px;
+            height: 60px;
+            left:30px;
+            background:url("../img/arrow.png") center center no-repeat;
+        }
+
+        .next:hover{
+            background-color:#333;
+            opacity: 0.8;
+            filter:alpha(opacity=80);
+        }
+
+        .prev:hover{
+            background-color: #333;
+            opacity: 0.8;
+            filter: alpha(opacity=80);
+        }
+
+	</style>
 </head>
 <body>
-	<h1>summon</h1>
+	
+
+	<section class="banner-wrapper">
+		
+		<ul class="banners-container" style="left:-1400px;margin-top: 0px;-webkit-padding-start:0px;">
+			<li><a href="#"><img src="../img/home/3.png"></a></li>
+			<li><a href="#"><img src="../img/home/1.png"></a></li>
+			<li><a href="#"><img src="../img/home/2.png"></a></li>
+			<li><a href="#"><img src="../img/home/3.png"></a></li>
+			<li><a href="#"><img src="../img/home/1.png"></a></li>
+		</ul>
+
+		<a class="next btn" href="#"></a>
+    	<a class="prev btn" href="#"></a>
+		
+	</section>
+
+	<section class="container">
+		<aside>
+			<h2 id="introduce">人才理念</h2>
+			<h2 id="ceo">招聘信息</h2>
+			<h2 id="organize">员工培训</h2>
+		</aside>
+
+		<article>
+
+			<iframe  id="iframecontainer" align="center" width="100%" height="100%" src="introduce.html"  frameborder="no" border="0" marginwidth="0" marginheight="0" scrolling="no"></iframe>
+		</article>
+	</section>
+
+	<script type="text/javascript">
+	
+		var container = document.getElementsByClassName('banners-container')[0];
+		var timer = null;
+		var img_width = -parseInt(container.style.left);
+		var moving = false;
+		var next = document.getElementsByClassName('next')[0];
+   		var prev = document.getElementsByClassName('prev')[0];
+
+   		next.onclick = rightClick;
+   		prev.onclick = leftClick;
+			
+		console.log(img_width+"================="+container);
+		// //模拟左右点击动作
+    	function rightClick() {
+        	if (!moving) {
+            	if (container.offsetLeft <= -4200)  //模拟无限滚动
+          		{
+                	container.style.left = 0 + "px";
+            	}
+            //	console.log("offsetLeft:"+container.offsetLeft);
+            	startMove(container.offsetLeft - img_width);
+        	}
+    	}
+
+    	function leftClick() {
+        	if (!moving){
+         		if (container.offsetLeft >= -1400) {
+              		container.style.left = -5600 + "px";
+            	}
+        		startMove(container.offsetLeft + img_width);
+        	}
+    	}
+
+    	//移动到指定位置
+    	function startMove(target) {
+        	var speed = 0;
+
+        	//	switchDot((target / -1180) - 1);        //  -1180 -2360 -3540
+
+        	clearInterval(timer); //解决重复点击的定时器叠加bug
+
+        	timer = setInterval(function () {
+            	speed = (target - container.offsetLeft) / 10; //速度
+
+           		speed = speed > 0 ? Math.ceil(speed) : Math.floor(speed);
+
+            	if (target == container.offsetLeft) {
+                	clearInterval(timer);
+                	moving = false;
+            	}
+            	else {
+                	container.style.left = container.offsetLeft + speed + "px";
+                	moving = true;
+            	}
+        	}, 30);
+    	}
+
+
+    	var clearAutoPlay = null;
+   			 //自动播放
+    	function autoPlay() {
+        	clearAutoPlay = setInterval(function () {
+            		rightClick();
+        	}, 1500);
+    	}
+
+    	autoPlay();
+
+    	container.onmouseover = function () {
+        	clearInterval(clearAutoPlay);
+    	};
+    	container.onmouseout=function () {
+        	autoPlay();
+    	};
+
+    	var introduce = document.getElementById("introduce");
+		var ceo = document.getElementById("ceo");
+		var organize = document.getElementById("organize");
+
+		var list = document.getElementsByTagName("h2");
+		var iframecontainer = document.getElementById("iframecontainer");
+		introduce.click;
+
+		trunOff();
+		introduce.style.color = "#fff";
+		introduce.style.paddingTop = "15px";
+		introduce.style.paddingBottom = "15px";
+		introduce.style.marginTop="-10px";
+		introduce.style.marginBottom = "-10px";
+		introduce.style.backgroundColor = "#abceef";
+		iframecontainer.src="../html/summon/page1.html";
+
+		introduce.addEventListener("click",function(){
+			
+			trunOff();
+			introduce.style.color = "#fff";
+			introduce.style.paddingTop = "15px";
+			introduce.style.paddingBottom = "15px";
+			introduce.style.marginTop="-10px";
+			introduce.style.marginBottom = "-10px";
+			introduce.style.backgroundColor = "#abceef";
+			iframecontainer.src = "../html/summon/page1.html";
+		});
+
+		ceo.addEventListener("click",function(){
+			console.log("i have been click");
+			trunOff();
+			ceo.style.marginTop="-10px";
+			ceo.style.marginBottom = "-10px";
+			ceo.style.color = "#fff";
+			ceo.style.paddingTop = "15px";
+			ceo.style.paddingBottom = "15px";
+			ceo.style.backgroundColor = "#abceef";
+			iframecontainer.src="../html/summon/page2.html"
+		});
+
+		organize.addEventListener("click",function(){
+			console.log("i have been click");
+			trunOff();
+			organize.style.marginTop="-10px";
+			organize.style.marginBottom = "-10px";
+			organize.style.color = "#fff";
+			organize.style.paddingTop = "15px";
+			organize.style.paddingBottom = "15px";
+			organize.style.backgroundColor = "#abceef";
+			iframecontainer.src="../html/summon/page3.html"
+		});
+
+
+		
+
+		 function trunOff(){
+			for(var i =0;i<list.length;i++){
+				list[i].style.color = "#f00";
+				list[i].style.backgroundColor= "#fff";
+				list[i].style.paddingTop = "0px";
+				list[i].style.paddingBottom = "0px";
+				list[i].style.marginTop="10px";
+				list[i].style.marginBottom = "10px";
+			}
+		}
+
+	</script>
+
 </body>
 </html>
