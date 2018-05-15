@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	
+
+<script type="text/javascript">
+	
+
+	var person = {};
+	person.name ="alan"
+
+	console.log(person.name);
+
+
+	function add(num1,num2){
+
+		return num1+num2;
+	}
+
+	function subtract(num1,num2){
+		return num1-num2;
+	}
+
+	function multiply(num1,num2){
+		return num1*num2;
+	}
+
+	var result = subtract(add(21,32),24);
+
+	var result2 = subtract(21,32)+multiply(24,5);
+
+	document.write(result+"===="+result2);
+
+	var family = {
+
+		me:'me',
+
+		setBoby:function(sex){
+			if (sex == 'female') {
+				this.name = 'niuniu';
+			}else{
+				this.name = 'niu'
+			}
+
+		}
+
+	}
+
+    var sex = 'female';
+
+	family.setBoby(sex);
+
+	family.setBoby = function(sex){
+		console.log("log");
+	}
+
+	family.setBoby(sex);
+
+	console.log(family.name);
+
+
+
+</script>
+
+</body>
+</html>

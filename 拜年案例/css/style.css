@@ -1,0 +1,250 @@
+*
+{
+    font-family: 'Microsoft Yahei';
+    font-size: 1.5625vw;
+
+    margin: 0;
+    padding: 0;
+
+    border: none;
+}
+
+html,
+body
+{
+    height: 100%;
+}
+
+
+/*music*/
+#music
+{
+    position: fixed;
+    z-index: 5;
+    top: 3vh;
+    right: 4vw;
+
+    width: 15vw;
+    height: 15vw;
+
+    border: 4px solid #ef1639;
+    border-radius: 50%;
+    background: #fff;
+}
+
+#music > img:first-of-type
+{
+    position: absolute;
+    top: 24%;
+    right: 2.5%;
+
+    width: 28.421%;
+}
+
+#music > img:last-of-type
+{
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+
+    width: 79%;
+    margin: auto;
+}
+
+
+/*page1*/
+
+.page
+{
+	position: absolute;
+    height: 100%;
+    width: 100%;
+}
+
+.page > .bg
+{
+    position: absolute;
+    z-index: -1;
+
+    width: 100%;
+    height: 100%;
+}
+
+#page_1 > .bg
+{
+    background: url(../切图图片资源/p1_bg.jpg) no-repeat center center;
+    background-size: 100%;
+}
+
+.p1_lantern
+{
+    font-size: 3.506rem;
+
+    position: absolute;
+    top: -3.4%;
+    right: 0;
+    left: 0;
+    /*todo*/
+
+    box-sizing: border-box;
+    width: 45vw;
+    height: 71.2vh;
+    margin: auto;
+    padding-top: 31vh;
+
+    text-align: center;
+
+    background: url(../切图图片资源/p1_lantern.png) no-repeat center bottom;
+    background-size: 100%;
+}
+
+.p1_lantern:before
+{
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+
+    width: 30vw;
+    height: 30vw;
+    margin: auto;
+
+    content:"";
+
+    opacity: .5;
+    border-radius: 50%;
+    background: #d60b3b;
+    box-shadow: 0 0 10vw 10vw #d60b3b;
+}
+
+.p1_imooc{
+	position: absolute;
+	left: 0;
+	right: 0;
+	bottom: 9vh;
+
+	margin: auto;
+	background:url(../切图图片资源/p1_imooc.png) no-repeat center center;
+	background-size: 100%;
+	width: 27.656vw;
+	height: 18.63vh;
+}
+
+.p1_words{
+	position: absolute;
+	left: 0;
+	right: 0;
+	bottom: 40px;
+	margin: auto;
+	font-size: 2.134rem;
+	color: #231815;
+	text-align: center;
+
+}
+
+#page_1{
+	display: block;
+}
+
+/*page2*/
+#page_2 > .bg
+{
+    background: url(../切图图片资源/p2_bg.jpg) no-repeat center center;
+    background-size: 100%;
+}
+
+#page_2{
+	display: none;
+}
+
+#page_2 > .p2_circle{
+
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	margin: auto;
+	width: ;
+	height: ;
+	background: url(../切图图片资源/p2_circle_outer.png) no-repeat center center;
+	background-size: 100%;
+
+
+}
+
+#page_2 > .p2_circle:before{
+
+	position: absolute;
+	content: "";
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	margin: auto;
+	width: ;
+	height: ;
+	background: url(../切图图片资源/p2_circle_inner.png) no-repeat center center;
+	background-size: 100%;
+}
+
+#page_2 > .p2_circle:after{
+
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	margin: auto;
+	content:"";
+	width: ;
+	height: ;
+	background: url(../切图图片资源/p2_circle_outer.png) no-repeat center center;
+	background-size: 100%;
+}
+
+
+#page_2 > .p2_2016{
+
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	margin: auto;
+	width: ;
+	height: ;
+	background: url(../切图图片资源/p2_circle_outer.png) no-repeat center center;
+	background-size: 100%;
+}
+
+/*page3*/
+
+#page_3 > .bg
+{
+    background: url(../切图图片资源/p3_bg.jpg) no-repeat center center;
+    background-size: 100%;
+}
+
+#page_3{
+	display: none;
+}
+
+#page_3 > .p3_logo{
+
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	margin: auto;
+	width: ;
+	height: ;
+	background: url(../切图图片资源/p2_circle_outer.png) no-repeat center center;
+	background-size: 100%;
+}
+
