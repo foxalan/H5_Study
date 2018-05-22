@@ -68,3 +68,18 @@
 
 </body>
 </html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+SELECT * FROM  dbo.t_student_score INNER JOIN dbo.t_student ON dbo.t_student_score.stu_id = dbo.t_student.stu_id INNER JOIN dbo.t_test_type ON dbo.t_student_score.test_id = dbo.t_test_type.test_id INNER JOIN dbo.t_subject ON dbo.t_student_score.sub_id = dbo.t_subject.subject_id CROSS JOIN dbo.t_school_class INNER JOIN dbo.t_school_grade ON dbo.t_school_class.grade_id = dbo.t_school_grade.grade_id INNER JOIN dbo.t_student_class ON dbo.t_school_class.class_id = dbo.t_student_class.class_id WHERE dbo.t_student_score.stu_id = 20120946
